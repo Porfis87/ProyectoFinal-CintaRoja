@@ -1,5 +1,7 @@
 import React from 'react';
-import {useFirebaseApp, useUser} from 'reactfire';
+import './App.css';
+import CreateContainer from './containers/CreateContainer'
+import { useFirebaseApp, useUser } from 'reactfire';
 import Auth from './Auth';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -11,10 +13,11 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      { user && <p>Usuario: {user.email} </p>}
+      {user && <p>Usuario: {user.email} </p>}
       <Auth />
       <Switch>
         <Route exact path="/" component={MainContainer} />
+        <Route exact path="/create" component={CreateContainer} />
       </Switch>
     </BrowserRouter>
   );
