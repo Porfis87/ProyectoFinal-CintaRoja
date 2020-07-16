@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MainContainer from "./containers/MainContainer"
 import Contacto from './containers/Contacto';
+import CreateContainer from "./containers/"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={MainContainer} />
         <Route exact path="/contacto" component={Contacto} />
+        <Route exact path="/create" component={CreateContainer} />
       </Switch>
     </BrowserRouter>
   );
