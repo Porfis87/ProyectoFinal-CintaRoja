@@ -1,7 +1,7 @@
 import React from 'react'
 import FormProduct from '../components/FormProduct'
 import { useHistory } from 'react-router-dom'
-import { ProductClass } from '../utils/ProductsClass'
+import { ProductsClass } from '../utils/ProductsClass'
 import axios from 'axios'
 
 const CreateContainer = () => {
@@ -10,15 +10,15 @@ const CreateContainer = () => {
     const history = useHistory()
 
     const createProduct = (article, category, color, price,) => {
-        const newProduct = new ProductClass(article, category, color, price, 'a')
+        const newProduct = new ProductsClass(article, category, color, price, 'a')
         axios.post(URL, newProduct.a)
-            .then(() => history.push('./'))
+            .then(() => history.push('/'))
             .catch((err) => alert(err))
     }
 
     return (
         <div className="container">
-            <FormProduct crateProduct={createProduct} />
+            <FormProduct createProduct={createProduct} />
         </div>
     )
 }
