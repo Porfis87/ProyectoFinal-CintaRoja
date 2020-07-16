@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import Logo from "../assets/logo-sophie.png"
-import style from "./Navbar.css"
+import Style from "./Navbar.css"
 
 const NavBar = () => {
   return (
@@ -17,10 +17,10 @@ const NavBar = () => {
               <NavLink className="nav-link" to="#"> <span class="sr-only"></span>Log In / Sign Up</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="#">Agregar Stock</NavLink>
+              <NavLink className="nav-link" to="/create">Agregar Stock</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="#">Contacto</NavLink>
+              <NavLink className="nav-link" to="/Contacto">Contacto</NavLink>
             </li>
             <li className="nav-item dropdown">
               <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
