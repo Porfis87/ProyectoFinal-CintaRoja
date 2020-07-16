@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Product from '../components/Product'
@@ -37,6 +38,16 @@ const MainContainer = () => {
 
             />)}
         </main>
+
+import React from 'react'
+
+
+const MainContainer = () => {
+    return (
+        <div>
+            
+        </div>
+
     )
 }
 
