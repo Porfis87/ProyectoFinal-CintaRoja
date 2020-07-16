@@ -1,15 +1,22 @@
 import React from 'react';
 import {useFirebaseApp, useUser} from 'reactfire';
 import Auth from './Auth';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MainContainer from "./containers/MainContainer"
 
 
 function App() {
   const user = useUser();
   return (
-    <div>
+    <BrowserRouter>
+      <Navbar />
       { user && <p>Usuario: {user.email} </p>}
       <Auth />
-    </div>
+      <Switch>
+        <Route exact path="/" component={MainContainer} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
