@@ -18,7 +18,10 @@ const CreateContainer = () => {
 
     return (
         <div className="container">
-            <FormProduct createProduct={createProduct} />
+            <div className="row justify-content-center">
+                <FormProduct createProduct={createProduct} />
+            </div>
+
         </div>
     )
 }

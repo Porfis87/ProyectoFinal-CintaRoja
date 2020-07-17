@@ -35,45 +35,48 @@ const FormProduct = (props) => {
     }
 
     return (
-        <div className="mt-5 card p-4">
-            <div className="form-group">
-                <label htmlFor="article">Artículo</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    onChange={articleHandler}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="category">Categoría</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    onChange={categoryHandler}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="color">Color</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    onChange={colorHandler}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="price">Precio</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    onChange={priceHandler}
-                />
-            </div>
-            <button
-                className="btn btn-secondary"
-                onClick={() => submitForm()}
-            >Agregar
+        <div className="col-md-4 center">
+            <div className="mt-5 card p-4">
+                <div className="form-group">
+                    <label htmlFor="article">Artículo</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        onChange={articleHandler}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="category">Categoría</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        onChange={categoryHandler}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="color">Color</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        onChange={colorHandler}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="price">Precio</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        onChange={priceHandler}
+                    />
+                </div>
+                <button
+                    className="btn btn-secondary"
+                    onClick={() => submitForm()}
+                >Agregar
             </button>
-        </div>
+            </div>
+        </div >
+
     )
 }
 
