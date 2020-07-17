@@ -1,3 +1,10 @@
-.login{
+.user{
     float: right;
+    margin-left: 250px;
+    margin-top: 20px;
+    /* border: 4px black solid; */
+}
+.padre{
+    margin-left: 10px;
+    margin-top: 20px;
 }
