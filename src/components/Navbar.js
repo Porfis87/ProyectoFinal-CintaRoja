@@ -1,9 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import Logo from "../assets/logo-sophie.png"
-import Style from "./Navbar.css"
+import "./Navbar.css"
+import Auth from "../Auth";
+import { useFirebaseApp, useUser } from 'reactfire';
 
 const NavBar = () => {
+  const user = useUser();
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-ligth" >
@@ -12,14 +15,18 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav padre">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/create">Agregar Stock</NavLink>
+              <NavLink className="nav-link hijo1" to="/create">Agregar Stock</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/Contacto">Contacto</NavLink>
+              <NavLink className="nav-link hijo2" to="/Contacto">Contacto</NavLink>
             </li>
           </ul>
+          <div className="user"> 
+          {user && <p>Usuario: {user.email} </p>}
+          <Auth />
+          </div>
         </div>
       </nav>
     </div>
